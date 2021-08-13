@@ -1,0 +1,34 @@
+<div style="margin-top: 30px;">
+
+  <div style="background-color:#fafafa;" >
+    <h4 class="display-5" style="padding: 15px;">Media Detail</h4>
+  </div>
+  
+</div>
+<form>
+    <div class="container1">
+        <div class="row">
+          <div class="col fas fa-user-alt" >
+           <h4 class="display-5">{{media.title}}</h4>
+           <img width="300vw" height="300vh" src={{media.url}} />
+          </div>
+          <div class="col"  style="font-size: x-large;">
+            <div class="btn-group btn-group-justified" style="width: auto; text-align: center;">
+                <a href="#" class="btn btnclrout field" >Sepia</a>
+                <a href="#" class="btn btnclrout field" >Grey</a>
+                <a href="#" class="btn btnclrout field" >Brightness</a>
+                <a href="#" class="btn btnclrout field" >Contrast</a>
+              </div><br><br>
+            <div class="wrapper">
+              <h5>{{ media.likes }} ❤️</h5> 
+              <h5>{{ media.description }}</h5>
+            </div>
+
+            <div class="wrapper" style="margin-top: 15px;"> 
+              <h5>{{ media.tags }}</h5>
+            </div>
+
+          </div>
+        </div>
+        </div>
+</form>

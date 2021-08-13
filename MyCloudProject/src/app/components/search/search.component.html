@@ -1,0 +1,87 @@
+
+<div class="container-flex">
+<div class="row" style="margin-top: 30px; text-align: center;">
+  <div class="col-lg-3">
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        
+      <a [routerLink]="['/newsfeed']" class="list-group-item btn list-group-item">News Feed</a>
+      <a [routerLink]="['/blockuser']" class="list-group-item btn list-group-item ">Blocked Accounts</a>
+      <a [routerLink]="['/accountdetails']" class="list-group-item btn list-group-item ">Account update</a>
+      <a [routerLink]="['/search']" class="list-group-item btn list-group-item ">Search</a>
+      <a [routerLink]="['/login']" (click)="logout()" class="list-group-item btn list-group-item ">Logout</a>
+
+  </div>
+  </div>
+  <div class="col-9" >
+    <form >
+    <div style="width: 50vw; margin-left: 20px;">
+      <input class="form-control" #username type="text" placeholder="Search username"
+             aria-label="Search"/> 
+             <button class="btn btnclr" (click)="searchUser(username.value)" (click)="searchResult==true" (click)="noResult==true" style="margin-top: 15px;" >Search</button>
+      </div>  
+                      
+      
+    </form>
+
+    <div style="width: 50vw; margin-left: 20px; margin-top: 20px;">
+    <div *ngIf="noResult">
+      <div style="text-align: center;">
+    
+        <h5 class="display-5">Result</h5>
+      
+    
+        <div style="text-align: center;">
+    
+            <div class="card" >
+            <!-- </div>*ngFor="let p of media">    -->
+            <h5>No profile with that name</h5>
+                
+            </div>
+        </div>
+      </div>
+      
+    
+    </div> 
+    
+    
+    
+    
+    
+        <!--   follow list -->
+        <div *ngIf="searchResult">
+      <div >
+    
+        <!--             class="col-lg-11" -->
+        <h5 class="display-5">Result</h5>
+      
+    
+        <div style="text-align: center;">
+    
+            <div class="card mx-auto" style="width: 18rem;">
+            <!-- </div>*ngFor="let p of media">    -->
+    
+                <div><br>
+                    <img class="card-img-top" src="{{ user.profilepic }}" alt="Profile pic" >
+           
+                </div>
+                <div class="card-body">
+                    <h5 style="text-align: center;" class="card-title">{{ user.username }}</h5>
+                
+                    <div class="btn-group">
+                        <button type="button" class="btn btnclr" (click)="follow(user.id)">Add</button>
+                        
+                      </div>              
+                </div>
+                
+                
+                </div>
+            </div>
+      </div>
+    
+    </div>
+    </div>
+
+
+</div>
+
+</div>

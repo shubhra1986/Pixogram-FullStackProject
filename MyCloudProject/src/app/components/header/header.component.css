@@ -1,0 +1,15 @@
+.navbar.center .navbar-inner {
+    text-align: center;
+    
+}
+
+.navbar.center .navbar-inner .nav {
+    display:inline-block;
+    float: none;
+    vertical-align: top;
+    
+}
+.profilepic{
+    border-radius: 50%;
+    margin-left: 5px;
+}
