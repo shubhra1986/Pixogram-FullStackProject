@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  h2:
+    console:
+      path: /console
+      enabled: true
+      settings:
+        web-allow-others: true
+  application:
+    name: media-service
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    
+    
+   
